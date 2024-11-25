@@ -1,0 +1,64 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Input nama game -->
+    <EditText
+        android:id="@+id/etGameName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Game Name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Input deskripsi game -->
+    <EditText
+        android:id="@+id/etGameDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Game Description"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@+id/etGameName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Input publisher/developer -->
+    <EditText
+        android:id="@+id/etGamePublisher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Publisher/Developer"
+        app:layout_constraintTop_toBottomOf="@+id/etGameDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Input harga game -->
+    <EditText
+        android:id="@+id/etGamePrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/etGamePublisher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button simpan -->
+    <Button
+        android:id="@+id/btnSaveGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@+id/etGamePrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
