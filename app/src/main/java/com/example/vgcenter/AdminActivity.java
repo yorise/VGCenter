@@ -17,6 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import adapter.GameAdapter;
+import database.helper.GameDatabaseHelper;
+import entity.Game;
+
 public class AdminActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private GameAdapter gameAdapter;
@@ -33,7 +37,7 @@ public class AdminActivity extends AppCompatActivity {
 
         gdbHelper = new GameDatabaseHelper(this);
         gameList = new ArrayList<>();
-        gameAdapter = new GameAdapter(gameList, this::onGameItemClicked, this::onGameDeleteClicked);
+        gameAdapter = new GameAdapter(gameList,true, this::onGameItemClicked, this::onGameDeleteClicked);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(gameAdapter);

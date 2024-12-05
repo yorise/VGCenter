@@ -1,4 +1,4 @@
-package com.example.vgcenter;
+package entity;
 
 public class Game {
     private int id;
